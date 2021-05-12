@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import "bootstrap/dist/css/bootstrap.min.css"
+import {plusToCart, minusToCart, deleteToCart} from '../actions/cart'
 
-const CartPage = ({ cart }) => {
+const CartPage = ({ cart, plusToCart, minusToCart, deleteToCart}) => {
     return (
         <div>
-            <table className="table table-bordered">
+            <h1>Cart</h1>
+            <table className="cart-table table table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -27,13 +29,26 @@ const CartPage = ({ cart }) => {
                                 {item.product.title}
                             </td>
                             <td>
-                                {item.product.price}
+                                {item.product.price}$
                             </td>
                             <td>
                                 {item.count}
+
+                                <button onClick={() => plusToCart(item.product)} className="ml-4 btn btn-danger">
+                                    +
+                                </button>
+
+                                <button onClick={() => minusToCart(item.product)} className="ml-2 btn btn-danger">
+                                    -
+                                </button>
+                                
+                                <button onClick={() => deleteToCart(item.product)} className="ml-2 btn btn-danger">
+                                    d
+                                </button>
+
                             </td>
                             <td>
-                                {item.lineTotalPrice}
+                                {item.lineTotalPrice}$
                             </td>
                         </tr>   
                     ))}
@@ -47,4 +62,4 @@ const msp = ({ cart }) => {
     return { cart }
 }
 
-export default connect(msp)(CartPage);
+export default connect(msp, {plusToCart, minusToCart, deleteToCart})(CartPage);

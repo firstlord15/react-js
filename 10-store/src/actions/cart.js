@@ -6,4 +6,26 @@ const addToCart = (product) => {
     }
 }
 
-export {addToCart};
+const plusToCart = (product) => {
+    return {
+        type: "PLUS_TO_CART_PRODUCT",
+        product
+    }
+}
+
+const minusToCart = (product) => {
+    return {
+        type: "MINUS_TO_CART_PRODUCT",
+        product
+    }
+}
+
+const deleteToCart = (product) => {
+    return {
+        type: "DELETE_TO_CART_PRODUCT",
+        product
+    }
+}
+
+
+export {addToCart, plusToCart, minusToCart, deleteToCart};
