@@ -1,0 +1,48 @@
+.slider {
+    background-image: url(https://monacofrance.net/assets/images/AdobeStock_94584043.jpeg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    color: white;
+}
+
+.slider .opacity {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgb(104, 255, 247);
+    font-size: 55px;
+}
+
+.modern {
+    max-height: 55vh;
+    min-height: 55vh;
+}
+
+.text-de {
+    font-size: 17px;
+    text-shadow: 0 0 3px #ff6bc1;
+    color: rgb(255, 101, 101);
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title-item {
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 3px rgb(110, 110, 110);
+}

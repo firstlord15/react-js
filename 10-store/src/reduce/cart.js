@@ -91,5 +91,3 @@ const cart = (state = initialState, actions) => {
 }
 
 export default cart;
-
-// total price всех сумм
