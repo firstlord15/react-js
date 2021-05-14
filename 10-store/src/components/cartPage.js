@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import "./css/cartPage.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import {plusToCart, minusToCart, deleteToCart} from '../actions/cart'
 
@@ -10,12 +11,12 @@ const CartPage = ({ cart, plusToCart, minusToCart, deleteToCart}) => {
             <table className="cart-table table table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Image</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Count</th>
-                        <th scope="col">Total Price</th>
+                        <th scope="col" className="text-2">#</th>
+                        <th scope="col" className="text-2">Image</th>
+                        <th scope="col" className="text-2">Title</th>
+                        <th scope="col" className="text-2">Price</th>
+                        <th scope="col" className="text-2">Count</th>
+                        <th scope="col" className="text-2">Total Price</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,12 +39,12 @@ const CartPage = ({ cart, plusToCart, minusToCart, deleteToCart}) => {
                                     +
                                 </button>
 
-                                <button onClick={() => minusToCart(item.product)} className="ml-2 btn btn-danger">
+                                <button onClick={() => minusToCart(item.product)} className="btn btn-danger">
                                     -
                                 </button>
                                 
-                                <button onClick={() => deleteToCart(item.product)} className="ml-2 btn btn-danger">
-                                    d
+                                <button onClick={() => deleteToCart(item.product)} className="btn btn-danger">
+                                    X
                                 </button>
 
                             </td>
@@ -54,6 +55,13 @@ const CartPage = ({ cart, plusToCart, minusToCart, deleteToCart}) => {
                     ))}
                 </tbody>
             </table>
+
+            <div>
+                <h5 className="text">  
+                    TotalPrice: {cart.totalPrice}$ 
+                </h5>
+            </div>
+
         </div>
     );
 };

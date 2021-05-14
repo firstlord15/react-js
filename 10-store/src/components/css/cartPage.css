@@ -1,0 +1,11 @@
+.text {
+    font-family: cursive;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+.text-2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 2px rgb(101, 255, 216);
+}
