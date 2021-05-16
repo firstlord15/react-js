@@ -36,7 +36,7 @@ const items = [
     },
     {
         id: "6", 
-        title: "Человек муравей и оса",
+        title: "Человек муравей 2",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint beatae facilis vitae voluptatum unde! Nobis sequi iste vitae, reiciendis velit perspiciatis nam quaerat porro totam officia voluptatum eligendi id suscipit.",
         image: "https://mocah.org/uploads/posts/539583-Wasp-Marvel.jpg",
         video: "https://www.youtube.com/embed/Du90MCtUpN0"

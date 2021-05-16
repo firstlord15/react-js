@@ -3,47 +3,42 @@ import './App.css'
 import { Route } from 'react-router';
 import { connect } from 'react-redux'
 import Navbar from '../components/Navbar'
-import "bootstrap/dist/css/bootstrap.min.css"
-import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Detail from '../components/Detail';
+import Card from '../components/Card';
 
 
 const App = ({ state }) => {
   return (
-    <div>
+    <div className="back">
       <header>
         <Navbar />
       </header>
-      <main>
-        <div className="slider mb-3">
-          <div className="opacity">
-            <div className="slider-text">
-              <h1 className="text">Cinema</h1>
-            </div>
-          </div>
-        </div>
-        <Route path="/" exact>
-          <div className="container">
-            <div className="row">
-              {state.map((item) => (
-                <div className="col-3 mb-2 mt-2">
-                  <div className="card modern">
-                    <img className="card-img-top" src={item.image} />
-                    <div className="card-body">
-                      <h5 className="card-title text-center title-item">{item.title}</h5>
-                      <p className="card-text text-de">{item.description}</p>
-                      <Link to={`/items/${item.id}`} className="btn btn-primary">Detail</Link>
-                    </div>
-                  </div>
+      <div className="container">
+        <main>
+          <Route path="/" exact>
+            <div className="slider">
+              <div className="opacity">
+                <div className="slider-text">
+                  <h1 className="text">Cinema</h1>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </Route>
-        <Route path="/items/:id">
-          <Detail state={state} />
-        </Route>
-      </main>
+            <div className="container border con-card">
+              <div className="row">
+                {state.map((item) => (
+                  <div className="col-md-3 animate-link mb-2 mt-2">
+                    <Card item={item} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Route>
+          <Route path="/items/:id">
+            <Detail state={state} />
+          </Route>
+        </main>
+      </div>
     </div>
   );
 };

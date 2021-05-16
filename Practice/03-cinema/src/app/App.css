@@ -1,3 +1,14 @@
+img {
+    width: 100%;
+}
+
+body {
+    background-image: url(https://img2.goodfon.ru/wallpaper/nbig/5/1b/cvet-pyatno-relef-kraski-1624.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .slider {
     background-image: url(https://monacofrance.net/assets/images/AdobeStock_94584043.jpeg);
     background-repeat: no-repeat;
@@ -27,9 +38,19 @@
     font-size: 55px;
 }
 
-.modern {
-    max-height: 55vh;
-    min-height: 55vh;
+.Link-detail {
+    text-decoration: none;
+    text-transform: none;
+}
+
+.animate-link {
+    transition: 0.2s;
+}
+
+.animate-link:hover{
+    -webkit-transform: scale(1.03); 
+    transform: scale(1.03);
+    opacity: 0.9;
 }
 
 .text-de {
@@ -45,4 +66,22 @@
     font-family: sans-serif;
     font-weight: bold;
     text-shadow: 0 0 3px rgb(110, 110, 110);
+}
+
+.con-card {
+    background: linear-gradient(to right, #ff6701, #5bfaff);
+}
+
+.brand-plus {
+    font-family: system-ui;
+    font-weight: 600;
+    margin-right: auto;
+    opacity: 0.9;
+    transition: 0.2s;
+    font-size: 1.8rem!important;
+}
+
+.brand-plus:hover{
+    text-shadow: 0 0 20px black;
+    opacity: 1;
 }
